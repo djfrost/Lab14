@@ -53,18 +53,18 @@ int TableSortedList<T>::tableSize()
 template < class T >
 T* TableSortedList<T>::tableRetrieve(String* sk)
 {
-		
+	// use iterator to find item
 }
 template < class T >
 void TableSortedList<T>::tableInsert(T* item)
 {
-
+	//there is an insert in sortedlist
 }
 
 template < class T >
 bool TableSortedList<T>::tableRemove(String* search_key)
 {
-
+	//there is a remove in sorted list
 }
 
 template < class T >
