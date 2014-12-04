@@ -65,7 +65,17 @@ void TableSortedList<T>::tableInsert(T* item)
 template < class T >
 bool TableSortedList<T>::tableRemove(String* search_key)
 {
-	sldl->remove(search_key);
+	ListDoublyLinkedIterator<T>* iter = iterator();
+	while(iter->hasNext())
+	{
+		if(iter->next()->getKey() == search_key)
+		{
+			sldl->remove(search_key);
+			return true;
+		}
+	}
+	delete iter;
+	return false;
 }
 
 template < class T >
