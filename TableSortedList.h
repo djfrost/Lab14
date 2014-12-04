@@ -53,11 +53,16 @@ int TableSortedList<T>::tableSize()
 template < class T >
 T* TableSortedList<T>::tableRetrieve(String* sk)
 {
+<<<<<<< HEAD
+=======
+	return sldl->get(sk);
+>>>>>>> origin/master
 	
 }
 template < class T >
 void TableSortedList<T>::tableInsert(T* item)
 {
+<<<<<<< HEAD
 	ListDoublyLinkedIterator<T>* iter = sldl->iterator();
 	int count = 0;
 	while(iter->hasNext())
@@ -67,19 +72,22 @@ void TableSortedList<T>::tableInsert(T* item)
 		count++;
 	}
 	delete iter;
+=======
+>>>>>>> origin/master
 	sldl->add(item);
 }
 
 template < class T >
 bool TableSortedList<T>::tableRemove(String* search_key)
 {
-
+	sldl->remove(search_key);
 }
 
 template < class T >
 ListDoublyLinkedIterator<T>* TableSortedList<T>::iterator()
 {
-	return sldl->iterator();
+	ListDoublyLinkedIterator<T>* iter  = sldl->iterator();
+	return iter;
 }
 
 #endif
