@@ -53,24 +53,26 @@ int TableSortedList<T>::tableSize()
 template < class T >
 T* TableSortedList<T>::tableRetrieve(String* sk)
 {
-	// use iterator to find item
+	return sldl->get(sk);
+	
 }
 template < class T >
 void TableSortedList<T>::tableInsert(T* item)
 {
-	//there is an insert in sortedlist
+	sldl->add(item);
 }
 
 template < class T >
 bool TableSortedList<T>::tableRemove(String* search_key)
 {
-	//there is a remove in sorted list
+	sldl->remove(search_key);
 }
 
 template < class T >
 ListDoublyLinkedIterator<T>* TableSortedList<T>::iterator()
 {
-	return sldl->iterator();
+	ListDoublyLinkedIterator<T>* iter  = sldl->iterator();
+	return iter;
 }
 
 #endif
