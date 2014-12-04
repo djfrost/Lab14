@@ -31,9 +31,18 @@ int main()
 
    TableSortedList<CD>* slt = new TableSortedList<CD>(&CD::compare_items, &CD::compare_keys);
 
+	ListArrayIterator<CD>* iter = slt->iterator();
+	int count = 0;
+	while(iter->hasNext())
+	{
+		CD* cd = iter->next();
+		cds[count] = cd;
+	}
+	delete iter;
    //DO THIS
    //thoroughly test your table
-
+	
+	
 
 
 
