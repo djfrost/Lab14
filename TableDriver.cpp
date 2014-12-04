@@ -37,6 +37,7 @@ int main()
 	{
 		CD* cd = iter->next();
 		cds[count] = cd;
+		count++;
 	}
 	delete iter;
    //DO THIS
@@ -44,9 +45,10 @@ int main()
 	
 	
 
-
-
-
+	while(!slt->isEmpty())
+	{
+		slt->remove();
+	}
 
 
    deleteCDs(cds);

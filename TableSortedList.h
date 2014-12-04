@@ -53,12 +53,21 @@ int TableSortedList<T>::tableSize()
 template < class T >
 T* TableSortedList<T>::tableRetrieve(String* sk)
 {
-		
+	
 }
 template < class T >
 void TableSortedList<T>::tableInsert(T* item)
 {
-
+	ListDoublyLinkedIterator<T>* iter = sldl->iterator();
+	int count = 0;
+	while(iter->hasNext())
+	{
+		if(sldl[count] == item)
+			return;
+		count++;
+	}
+	delete iter;
+	sldl->add(item);
 }
 
 template < class T >
